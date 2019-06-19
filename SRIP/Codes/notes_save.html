@@ -1,0 +1,20 @@
+<div class="comment">
+<textarea id="title" type="text "rows="18" cols="36"  placeholder="You can write and save notes regarding problem......"></textarea>
+<input type="submit" value="Save" onclick="insert()" style="width:40px;" /></form>
+</div>
+<div id="display"></div>
+<script type="text/javascript">
+var titles = [];
+var titleInput = document.getElementById("title");
+var messageBox = document.getElementById("display");
+function insert () {
+titles.push(titleInput.value);
+clearAndShow();
+}
+function clearAndShow ()
+{
+titleInput.value = "";
+messageBox.innerHTML = "";
+messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+}
+</script>
