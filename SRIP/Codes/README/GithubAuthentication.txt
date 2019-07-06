@@ -1,0 +1,13 @@
+cd myproject
+pipenv shell
+python manage.py runserver
+navigate to http://127.0.0.1:8000/
+
+
+******** IF ABOVE DOESN'T WORKS *********
+cd myproject
+pipenv install django
+pipenv shell
+pipenv install django-allauth
+python manage.py runserver
+navigate to http://127.0.0.1:8000/
