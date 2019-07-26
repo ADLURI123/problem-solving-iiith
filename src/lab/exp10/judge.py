@@ -14,7 +14,7 @@ PATH=PATH+'/'
 
 
 Language_select_html ={"c":"""<select name="language" id="codeId">
-
+    
 <option value="c" selected="selected"> C (gcc 4.3.2) </option>
 
 <option value="cpp"> C++ (g++ 4.3.2) </option>
@@ -26,8 +26,6 @@ Language_select_html ={"c":"""<select name="language" id="codeId">
 <option value="cpp" selected="selected"> C++ (g++ 4.3.2) </option>
 
 </select>"""};
-
-
 
 code_select_html ={
 	"Problem1":"""<select name="codeId" id="probId">

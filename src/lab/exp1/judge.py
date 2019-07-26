@@ -11,7 +11,7 @@ PATH=''
 for x in sfpath[0:-1]:
         PATH=PATH+'/'+x
 PATH=PATH+'/'
-
+sum=0
 
 Language_select_html ={"c":"""<select name="language" id="codeId">
 
@@ -121,6 +121,7 @@ def index(req):
 		<td> Code Output </td>
 		<td> Result </td>
 		<td> Remarks </td>
+		<td> Score </td>
 		</tr>"""
 
 		for i in InputTestFiles:
@@ -153,6 +154,8 @@ def index(req):
 				if EO==O:
 					result = "Accepted!!";
 					JudgeData_html+="<td> Passed </td>"
+					JudgeData_html+="<td> 20 </td>"
+					sum+=20
 				else:
 					result = "Wrong Answer"
 					JudgeData_html+="<td> Failed </td>"
@@ -243,4 +246,4 @@ def index(req):
 	F = open(PATH+submissionName,"w");
 	F.write(returnValue);
 	F.close();
-	redirect(req,submissionName);
+	redirect(req,submissionName);	

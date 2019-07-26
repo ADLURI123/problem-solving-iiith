@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import random
+import timeit
 from mod_python import util
 from mod_python.util import redirect
 from subprocess import *
@@ -100,9 +101,11 @@ def index(req):
 	F.close();
 	#Compile the code now and keep the executable in a a variable exename
 	exename = PATH+"current.out";
-	
+	start = timeit.default_timer()
 	compileErrors = Compile(exename,langauge,codeName);
-	JudgeData_html="";
+    stop = timeit.default_timer()
+    print(stop-start)
+    JudgeData_html="";
 	if(action=="Compile" and compileErrors!=""):
 			#return compilation error
 			result = "Compile Error"
