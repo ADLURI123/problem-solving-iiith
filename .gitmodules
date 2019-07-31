@@ -1,0 +1,3 @@
+[submodule "SRIP/Codes/SRIP/Codes/forum"]
+	path = SRIP/Codes/SRIP/Codes/forum
+	url = https://github.com/niutool/niuforum
